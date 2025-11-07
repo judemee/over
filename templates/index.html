@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OJ Evolve</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div>
+    <h1>Over Tech</h1>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="gallery">
+      <div class="main-image">
+        <img src="{{ url_for('static', filename='images/download.jpeg') }}" alt="Main Product" onclick="openModal(this.src)">
+      </div>
+      <div class="side-images">
+        <img src="data:image/jpeg;base64,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"
+                    alt="Natural Detox Foot Pads" onclick="openModal(this.src)">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYmLYNHXBJEmmmDoWoWtCgMOxxbO83oZOC1Q&s"
+                    alt="Natural Detox Foot Pads" onclick="openModal(this.src)">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXVUs8ANMocgXDw7D4CqMuAoliOueZPXxNKw&s"
+                    alt="Natural Detox Foot Pads" onclick="openModal(this.src)">
+      </div>
+    </div>
+
+    <div class="product-info">
+      <h1>Over Tech</h1>
+      <p>A 30 kVA Perkins generator is a robust, fuel-efficient diesel power solution suitable for a variety of applications, from home backup to industrial use. It typically uses a reliable, water-cooled Perkins engine (commonly the 1103A-33G or 1100 series engine) to deliver a consistent power supply. </p>
+      <p class="price">💰 ₦3,500,000</p>
+      <a href="#order" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- MODAL VIEW -->
+  <div id="imageModal" class="modal" onclick="closeModal()">
+    <img id="modalImg" class="modal-content">
+  </div>
+
+  <!-- PRODUCT DETAILS -->
+  <section class="details">
+    <h2>Key Characteristics</h2>
+    <p>
+<b>Power Output:</b> It provides a prime power output of 30 kVA (24 kW) and a standby power of around 33 kVA (26.4 kW).<br>
+<b>Engine:</b> Powered by a 3-cylinder or 4-cylinder, 1500 rpm (for 50 Hz systems) or 1800 rpm (for 60 Hz systems), heavy-duty industrial Perkins diesel engine, known for durability and efficiency.<br>
+<b>Operation:</b> Modern units are typically soundproofed with an acoustic canopy, designed for low noise operation (around 61-69 dBA at 7 meters), making them suitable for noise-sensitive environments like residential or commercial areas.<br>
+<b>Fuel Efficiency:</b>The diesel engines are highly fuel-efficient, consuming approximately 5.4-7.1 liters per hour at 75% load, which allows for extended runtime with an integral base fuel tank (typically 100L or more).<br>
+<b>Features:</b> Standard features often include electric start, a digital control panel for monitoring performance, and safety features like overload and low-oil pressure protection. Many models are also available with an Automatic Transfer Switch (ATS) for seamless backup power during outages.<br>
+<b>Applications:</b> Its versatility makes it ideal for powering essential equipment in construction, agriculture, small factories, offices, and homes.<br>
+These generators are known for their reliable performance and a widespread global support network for parts and service. </p>
+
+    <h3>Price List</h3>
+    <ul>
+      <li>30 kva – ₦3,500,000</li>
+    </ul>
+  </section>
+
+  <!-- ORDER FORM -->
+  <section id="order" class="order">
+    <h2>Place Your Order</h2>
+    <form method="POST" action="/submit">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="address" placeholder="Delivery Address" required></textarea>
+      <button type="submit" class="btn">Submit Order</button>
+    </form>
+  </section>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/2349160824849" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+    <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+
+  <footer>
+    <p>© 2025 OJ Evolve — All Rights Reserved.</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

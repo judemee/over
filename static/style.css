@@ -1,0 +1,215 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+}
+
+/* HERO SECTION */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #d2f8d2, #b8e6b8);
+}
+
+.gallery {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.main-image img {
+  width: 380px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.side-images {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.side-images img {
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.product-info {
+  max-width: 400px;
+}
+.price {
+  font-weight: bold;
+  color: #1daa52;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+.btn {
+  background: #1daa52;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.btn:hover {
+  background: #13863c;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+.modal-content {
+  display: block;
+  margin: auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+/* PRODUCT DETAILS */
+.details {
+  padding: 40px 20px;
+  background: #f9f9f9;
+  text-align: justify;
+}
+.details p {
+  text-align: left;
+}
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+.details li {
+  background: #fff;
+  padding: 10px;
+  margin: 5px auto;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ORDER FORM */
+.order {
+  padding: 40px 20px;
+  text-align: center;
+  background: #f1fff1;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000;
+}
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+}
+
+/* THANK YOU PAGE */
+.thankyou {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e8ffe8;
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+  }
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+  .side-images {
+    flex-direction: row;
+  }
+  .side-images img {
+    width: 100px;
+  }
+  .main-image img {
+    width: 300px;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e6ffe6, #b3ffcc);
+}
+
+.price {
+  font-weight: bold;
+  color: #00b84a;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.btn {
+  background: #00b84a;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s, transform 0.2s;
+}
+.btn:hover {
+  background: #00963b;
+  transform: scale(1.05);
+}
+
+.details {
+  padding: 40px 20px;
+  background: #fafffa;
+  text-align: center;
+}
+
+.order {
+  padding: 40px 20px;
+  text-align: center;
+  background: #e6ffe6;
+}
